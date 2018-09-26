@@ -17,10 +17,24 @@ namespace ZadaniePunkt
             string y1;
             int y2;
 
+            Punkt punkt1 = new Punkt(3, 3);
+            Punkt punkt2 = new Punkt(2, 2);
+            Punkt punkt3 = punkt1 + punkt2;
+            Punkt punkt4 = punkt1 - punkt2;
+            Punkt punkt5 = punkt1 * 2;
+
+            punkt1.Wyswietl();
+            punkt2.Wyswietl();
+            punkt3.Wyswietl();
+            punkt4.Wyswietl();
+            punkt5.Wyswietl();
+            Console.ReadLine();
+
 
             Punkt XY = new Punkt(5,5); // 2) Współrzędne punktu są ustalane na etapie tworzenia obiektu (konstruktor)
 
             XY.Wyswietl();
+            Console.WriteLine("Pawel");
 
             Console.WriteLine("Przesuń w prawo o:");
             x1 = Console.ReadLine();

@@ -14,7 +14,41 @@ namespace ZadaniePunkt
 
         public int Y { get; private set; }// właściwość 2
        
+        public static Punkt operator +(Punkt p1, Punkt p2)
+        {
+            int x = p1.X + p2.X;
+            int y = p1.Y + p2.Y;
+            Punkt result = new Punkt(x, y);
+            //Punkt result = new Punkt(p1.X + p2.X, p1.Y + p2.Y);
+            return result;
 
+        }
+
+        public static Punkt operator -(Punkt p1, Punkt p2)
+        {
+            int x = p1.X - p2.X;
+            int y = p1.Y - p2.Y;
+            Punkt result = new Punkt(x, y);
+            //Punkt result = new Punkt(p1.X + p2.X, p1.Y + p2.Y);
+            return result;
+
+        }
+
+        public static Punkt operator *(Punkt p1, int a)
+        {
+            int x = p1.X* a;
+            int y = p1.Y *a;
+            Punkt result = new Punkt(x, y);
+            //Punkt result = new Punkt(p1.X + p2.X, p1.Y + p2.Y);
+            return result;
+
+        }
+
+        public static Punkt operator *(int a, Punkt p1)
+        {
+            return p1*a;
+
+        }
 
         public Punkt(int wspx, int wspy) //konstruktor
         {
