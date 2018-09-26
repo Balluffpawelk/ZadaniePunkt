@@ -8,6 +8,7 @@ namespace ZadaniePunkt
 {
     class Punkt
     {
+        public static int Licznik { get; private set; }
 
         public int X { get; private set; }// właściwość 1
         
@@ -54,7 +55,8 @@ namespace ZadaniePunkt
         {
             X = wspx;
             Y = wspy;
-
+            Licznik++;
+            //Console.WriteLine("Licznik: {0}", Licznik);
         }
 
         public void Prawo(int ileP) //metoda 1
@@ -81,12 +83,18 @@ namespace ZadaniePunkt
 
         }
 
-
-        public void Wyswietl()
+        public override string ToString()
         {
+            return $"X:{X};Y:{Y}";
+        }
 
+        public virtual void Wyswietl()
+        {
+            //Console.WriteLine( $"X:{X};Y:{Y}");
             Console.WriteLine("Współrzędna X: {0}",X);
             Console.WriteLine("Współrzędna Y: {0}",Y);
+
+
         }
 
     }
